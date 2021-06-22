@@ -31,7 +31,9 @@ export default {
   },
   data() {
     return {
-      editedPost: {
+      editedPost: this.post 
+      ? { ...this.post } 
+      : {
         author: '',
         title: '',
         thumbnailLink: '',
